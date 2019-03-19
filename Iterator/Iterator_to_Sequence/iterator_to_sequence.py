@@ -4,7 +4,7 @@ class TestIterator(object):
         self.value = 0
 
     def __next__(self):
-        self.value = self.value + random.randrange(12,100)
+        self.value = self.value + random.randrange(12, 100)
         if self.value > 1000:
             raise StopIteration
         return self.value
@@ -13,8 +13,10 @@ class TestIterator(object):
         return self
 
 
-test = TestIterator()
 
-# using the list() to make the iterator being a sequence
-print(list(test))
+    
+if __name__ == "__main__":
+    test = TestIterator()
+    # using the list() to make the iterator being a sequence
+    print(list(test))
 
